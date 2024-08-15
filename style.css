@@ -1,0 +1,278 @@
+
+
+#logo{
+    width: 225px;
+    height: auto;
+    padding: 15px 25px;
+}
+
+#motorSlide, #circuitSlide, #customSlide{
+    width: 100%;
+}
+
+#products{
+    width: 400px;
+    height: auto;
+}
+
+#blueBackgroundLogo{
+    width: 300px;
+    opacity: 0.1;
+    position: absolute;
+    display: flex;
+    
+}
+
+#productImages{
+    width: 25%;
+    padding-top: 50px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p{
+    padding-left: 14px; 
+}
+
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float: right;
+}
+
+
+li.dropdown{
+    display: inline-block;
+}
+
+
+.topbar{
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    
+    
+}
+
+.topbar a{
+    color:black;
+    padding: 35px 4px;
+    margin-right: 50px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    
+}
+
+.topbar a:hover{
+    background-color: white;
+    color: rgb(91, 91, 91);
+}
+
+.dropdown{
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    
+    
+}
+
+.dropdown a{
+    color:black;
+    padding-left: 15px;
+    margin-right: 50px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: white;
+    
+}
+
+.dropdown a:hover{
+    background-color: white;
+    color: rgb(91, 91, 91);
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    background-color: white;
+    width: auto;
+    z-index: 1;
+    
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: rgb(91, 91, 91);
+
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.slideshow{
+    position: relative;
+    margin: auto;
+}
+
+.slideshowImages{
+    display: none;
+    padding-bottom: 50px;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.2s ease;
+    border-radius: 0 6px 6px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+/* Positions the next button to the right */
+.next{
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.prev:hover, .next:hover{
+    color: #aaaaaa;
+}
+
+
+
+/* Fading animation on slides */
+.fade{
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@keyframes fade{
+    from{opacity: 0.4}
+    to{opacity: 1}
+}
+
+.aboutSectionTitle{
+    display: flex;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding-left: 360px;
+    color: rgb(37, 0, 125);
+    font-weight: 100;
+    padding-top: 30px;
+}
+
+.aboutSectionPhrase{
+    display: flex;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 360px;
+    font-size: 35px;
+    padding-top: 42px;
+    color: black;
+    font-weight: 100;
+}
+
+.aboutSection{
+    position: absolute;
+    display: flex;
+    margin: auto;
+    padding-left: 346px;
+    padding-right: 16px;
+    padding-top: 125px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: rgb(41, 41, 41);
+}
+
+.aboutSectionFooter{
+    padding-left: 360px;
+    padding-top: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: rgb(41, 41, 41);
+
+}
+
+
+.learnMore a{
+    position: relative;
+    font-size: large;
+    text-decoration: none;
+    color: rgb(37, 0, 125);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 360px;
+}
+
+.learnMore{
+    float: left;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+.productSectionTitle{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: rgb(37, 0, 125);
+    font-weight: 100;
+}
+
+.productSectionPhrase{
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    color: black;
+    font-weight: 100;
+}
+
+

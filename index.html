@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>News</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <nav>
+        <ul>
+            <li style="float: left;"><a href="index.html"><img id="logo" alt="MCS Logo" src="Images/NewMCSLogo.png"></a></li>
+            <li class="topbar"><a href="search.html"><i class="fa fa-search"></i></a></li>
+            <li class="topbar"><a href="contact.html">CONTACT US</a></li>
+            <li class="topbar"><a href="about.html">ABOUT US</a></li>
+            <li class="topbar"><a href="news.html">NEWS</a></li>
+            <li class="topbar"><a href="applications.html">APPLICATIONS</a></li>
+            <li class="topbar"><a href="customization.html">CUSTOMIZATION</a></li>
+            <li class="dropdown">
+                <a style="padding-top: 35px;" href="products.html" class="dropdown">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <a style="padding-top: 40px;" href="amplifiers.html">Amplifiers</a>
+                    <a href="motors.html">Motors</a>
+                    <a href="matureproducts.html">Mature Products</a>
+                </div>
+            </li>
+            
+
+            
+        </ul>
+
+        <!--Slideshow-->
+
+        <div class="slideshow">
+            <div class="slideshowImages fade">
+                <img id="motorSlide" alt="Motors Slide" src="Images/CustomizationPage.png">
+            </div>
+
+            <div class="slideshowImages fade">
+                <img id="circuitSlide" alt="Circuit Board Slide" src="Images/Custom Motors.png">
+            </div>
+
+            <div class="slideshowImages fade">
+                <img id="customSlide" alt="Customization Slide" src="Images/CircuitBoardPage.png">
+            </div>
+
+        <a class="prev" href="#none" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" href="#none"  onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+       
+
+    
+        <script>
+        let slideIndex = 1;
+        autoShowSlides(slideIndex)
+        showSlides(slideIndex);
+
+
+        // Controls prev/next
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+
+        function autoShowSlides(){
+            let i;
+            let slides = document.getElementsByClassName("slideshowImages");
+            for(i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(autoShowSlides, 7500);
+    
+        }
+
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("slideshowImages");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for(i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";    
+        }   
+        </script>
+
+        <!--Section about MCS-->
+
+        <img src="Images/MinimalisticMotorBackground.png" alt="MCS Blue Logo" id="blueBackgroundLogo">
+        <h1 class="aboutSectionTitle">MOTION CONTROL SYSTEMS</h1>
+        <h1 class="aboutSectionPhrase">Our Design Focus is on You</h1>
+        <div class="aboutSection">
+            <p style="float: left; padding-right: 50px;">Since 1985, Motion Control Systems have been designing and manufacturing high performance
+                drive systems for both industry and government applications. Our design focus has been on
+                the development of extremely efficient and reliable brushless DC motors and controllers with 
+                low torque ripple and cogging characteristics.
+            </p>
+        </div>
+        <p class="aboutSectionFooter">Work with our engineers today to create your custom application!</p>
+        <ul><li class="learnMore"><a href="about.html"><b>LEARN MORE</b> &#10095;</a></li></ul>
+        
+        <h1 class="productSectionTitle">OUR PRODUCTS</h1>
+        <h1 class="productSectionPhrase">Explore What We Have</h1>
+        
+        <img style="padding-left: 70px;" id="productImages" src="Images/Placeholder.png" alt="MCS Motors">
+        <img style="padding-left: 100px;" id="productImages" src="Images/Placeholder.png" alt="MCS Amplifiers">
+        <img style="padding-left: 100px;" id="productImages" src="Images/Placeholder.png" alt="MCS Mature Products">
+
+    </body>
+    
+</html>
